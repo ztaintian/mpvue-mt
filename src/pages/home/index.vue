@@ -1,11 +1,16 @@
 <template>
   <div>
     <v-swiper></v-swiper>
+    <div class="top-placeholder">
+      <div class="top-placeholder-inner">附近商家</div>
+    </div>
+    <goods-list></goods-list>
   </div>
 </template>
 
 <script>
 import swiper from '@/components/swiper'
+import goodsList from '@/components/goodsList'
 
 export default {
   data () {
@@ -16,7 +21,8 @@ export default {
   },
 
   components: {
-    'v-swiper': swiper
+    'v-swiper': swiper,
+    goodsList
   },
 
   methods: {
@@ -49,4 +55,26 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.top-placeholder {
+  background: #fff;
+  margin-top: 20rpx;
+  text-align: center;
+}
+.top-placeholder-inner {
+  display: flex;
+  align-items center
+  justify-content center;
+  color: #333;
+  font-weight: bold;
+}
+.top-placeholder-inner:before, .top-placeholder-inner:after {
+  content: '';
+  width: 80rpx;
+  height: 0;
+  font-size: 0;
+  border-top: 1px solid #333;
+  -webkit-transform: scaleY(0.5);
+  -moz-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
 </style>
