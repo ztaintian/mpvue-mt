@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import App from './App'
-
+import fly from './utils/fly'
 Vue.config.productionTip = false
+Vue.prototype.$http = fly
 App.mpType = 'app'
 
 const app = new Vue(App)
@@ -19,16 +20,15 @@ export default {
       navigationBarTextStyle: 'black'
     },
     tabBar: {
-      color: '#272636',
-      selectedColor: '#FFD161',
-      backgroundColor: '#fff',
-      borderStyle: '#a8a8a8',
+      color: '#C3C3C3',
+      selectedColor: '#171717',
+      backgroundColor: '#FAFAFA',
+      borderStyle: 'white',
       list: [
         {
           pagePath: 'pages/home/main',
           iconPath: 'static/images/home.png',
           selectedIconPath: 'static/images/home-selected.png',
-          color: 'white',
           text: '首页'
         },
         {
