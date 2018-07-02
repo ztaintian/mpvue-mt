@@ -1,6 +1,12 @@
 import Vue from 'vue'
 import App from './App'
 import fly from './utils/fly'
+import './common/icon/iconfont.css'
+import QQMapWX from './utils/qqmap-wx-jssdk'
+
+Vue.prototype.$qqmap = new QQMapWX({
+  key: 'DKOBZ-SDGC6-CEKSL-MOVW3-CBGKE-SLBIU'
+})
 Vue.config.productionTip = false
 Vue.prototype.$http = fly
 App.mpType = 'app'
