@@ -1,6 +1,6 @@
 <template>
   <scroll-view>
-    <div class="field" v-for="(v,index) in poilist">                                                              
+    <div class="field border-1px" v-for="(v,index) in poilist" :key="index">                                                              
       <div class="avatar">
         <span class="avatar-brand">品牌</span>
         <img class="avatar-image" :src="v.pic_url" />
@@ -21,9 +21,7 @@
           <div class="clear"></div>                                        
         </div>      
       </div>                                    
-      <!-- <v-star :score="score"></v-star> -->
     </div>
-    <div class="bottom-load" v-if="bottomFlag">加载中...</div>
   </scroll-view>
 </template>
 
@@ -69,19 +67,8 @@ export default {
   display flex
   margin-left 20rpx
   padding: 30rpx 0 25rpx;
-  border-bottom 1rpx solid #E4E4E4
-  &::after
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2rpx;
-    background: #E4E4E4;
-    bottom: 0;
-    -webkit-transform: scaleY(0.5);
-    -moz-transform: scaleY(0.5);
-    -ms-transform: scaleY(0.5);
-    -o-transform: scaleY(0.5);
-    transform: scaleY(0.5);
+  &.border-1px
+    border-1px(#E4E4E4)
   .avatar 
     position relative
     .avatar-brand 

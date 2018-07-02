@@ -2,7 +2,7 @@
   <div>
     <v-swiper></v-swiper>
     <div class="top-placeholder">
-      <div class="top-placeholder-inner">附近商家</div>
+      <div class="top-placeholder-inner border-1px">附近商家</div>
     </div>
     <goods-list></goods-list>
   </div>
